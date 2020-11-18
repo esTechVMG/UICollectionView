@@ -17,6 +17,7 @@
 		3025AD962551C35300318701 /* UICollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025AD952551C35300318701 /* UICollectionViewTests.m */; };
 		3025ADA12551C35300318701 /* UICollectionViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025ADA02551C35300318701 /* UICollectionViewUITests.m */; };
 		3025ADBC2551C8C400318701 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3025ADBB2551C8C400318701 /* MyCollectionViewCell.m */; };
+		305AE83F25659BCA00B88976 /* Character.m in Sources */ = {isa = PBXBuildFile; fileRef = 305AE83E25659BCA00B88976 /* Character.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		3025ADA22551C35300318701 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3025ADBA2551C8C400318701 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
 		3025ADBB2551C8C400318701 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		305AE83D25659BCA00B88976 /* Character.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Character.h; sourceTree = "<group>"; };
+		305AE83E25659BCA00B88976 /* Character.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Character.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				3025AD7D2551C35000318701 /* SceneDelegate.m */,
 				3025AD7F2551C35000318701 /* ViewController.h */,
 				3025AD802551C35000318701 /* ViewController.m */,
+				305AE83D25659BCA00B88976 /* Character.h */,
+				305AE83E25659BCA00B88976 /* Character.m */,
 				3025AD822551C35000318701 /* Main.storyboard */,
 				3025ADBA2551C8C400318701 /* MyCollectionViewCell.h */,
 				3025ADBB2551C8C400318701 /* MyCollectionViewCell.m */,
@@ -272,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3025AD812551C35000318701 /* ViewController.m in Sources */,
+				305AE83F25659BCA00B88976 /* Character.m in Sources */,
 				3025AD7B2551C35000318701 /* AppDelegate.m in Sources */,
 				3025AD8C2551C35200318701 /* main.m in Sources */,
 				3025AD7E2551C35000318701 /* SceneDelegate.m in Sources */,

@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "MyCollectionViewCell.h"
+#import "Character.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,40 @@
     [super viewDidLoad];
     _collectionView.dataSource = self;
     _collectionView.delegate = self;
+    Character * e = [[Character alloc]init];
+    e.character=@"EH";
+    NSLog(e.character);
+    
+    //Request URL definition
+    /*NSURL * url= [NSURL URLWithString:@"https://qastusoft.com.es/apis/login.php"];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
+    //Request type
+    request.HTTPMethod = @"POST";
+    //Request Body
+    request.HTTPBody =[[[NSString alloc]initWithFormat:@"?name=test"] dataUsingEncoding:NSUTF8StringEncoding];
+    NSURLSession * session = [NSURLSession sharedSession];
+    
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data,NSURLResponse * _Nullable response, NSError * _Nullable error){
+        
+        if(error==nil){
+            NSHTTPURLResponse * res=(NSHTTPURLResponse *) response;
+            if([res statusCode]==200){
+                NSLog(@"HTTP Request Success");
+                NSDictionary * dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]; //Information received
+                NSLog(dict);
+            }else{
+                NSLog(@"HTTP Request Failed with status code %li", (long)[res statusCode]);
+            }
+        }else{
+            NSLog(@"Error connecting to server");
+        }
+                //NSLog(@"COMPLETE RESPONSE: %@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
+                //NSLog(@"JSON RESPONSE: %@",serializedResponse);
+                //NSLog(@"%@",response);
+                //NSLog(@"ERROR: %@",error);
+    }];
+    [task resume];*/
+    
 }
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
