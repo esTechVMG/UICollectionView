@@ -7,7 +7,6 @@
 
 #import "ViewController.h"
 #import "MyCollectionViewCell.h"
-#import "Character.h"
 
 @interface ViewController ()
 
