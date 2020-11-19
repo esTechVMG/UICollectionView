@@ -54,6 +54,8 @@
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     MyCollectionViewCell * cell= [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     NSDictionary *character = [characterList objectAtIndex:indexPath.row];
+    NSData * imageData = [[NSData alloc]initWithContentsOfURL:[NSURL URLWithString:[character objectForKey:@"image"]]];
+    [cell.imagen setImage:[[UIImage alloc]initWithData:imageData]];
     cell.etiqueta.text = [character objectForKey:@"character"];
     return cell;
 }
