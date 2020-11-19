@@ -41,16 +41,18 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jza-Ft-iWG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="107"/>
+                                                    <rect key="frame" x="14" y="7" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="GP9-TW-U3Y"/>
+                                                        <constraint firstAttribute="height" constant="100" id="Pb6-OX-Kue"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Jza-Ft-iWG" firstAttribute="leading" secondItem="o7F-4v-9OW" secondAttribute="leading" id="0Am-Fv-dyx"/>
                                                 <constraint firstAttribute="bottom" secondItem="E7D-3N-wJ6" secondAttribute="bottom" id="8nR-Br-9LX"/>
-                                                <constraint firstItem="E7D-3N-wJ6" firstAttribute="top" secondItem="Jza-Ft-iWG" secondAttribute="bottom" id="HUd-yL-Kh8"/>
-                                                <constraint firstAttribute="trailing" secondItem="Jza-Ft-iWG" secondAttribute="trailing" id="Iz9-0A-8FX"/>
-                                                <constraint firstItem="Jza-Ft-iWG" firstAttribute="top" secondItem="o7F-4v-9OW" secondAttribute="top" id="dzV-uF-JXv"/>
+                                                <constraint firstItem="Jza-Ft-iWG" firstAttribute="centerX" secondItem="o7F-4v-9OW" secondAttribute="centerX" id="GLx-rg-scw"/>
                                                 <constraint firstItem="E7D-3N-wJ6" firstAttribute="centerX" secondItem="o7F-4v-9OW" secondAttribute="centerX" id="ggr-vp-veP"/>
+                                                <constraint firstItem="E7D-3N-wJ6" firstAttribute="top" secondItem="Jza-Ft-iWG" secondAttribute="bottom" id="nkU-Nf-rVV"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
