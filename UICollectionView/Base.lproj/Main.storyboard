@@ -55,6 +55,7 @@
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="etiqueta" destination="E7D-3N-wJ6" id="fZt-em-FNn"/>
+                                            <outlet property="imagen" destination="Jza-Ft-iWG" id="o80-JR-pha"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

@@ -10,8 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Character : NSObject
-@property (readwrite,nonatomic) NSString *character;
+@property (readwrite,nonatomic) NSString *name;
 @property (readwrite,nonatomic) NSString *quote;
-@property (readwrite,nonatomic) NSString *imageUrl;
+@property (readwrite,nonatomic) NSData *image;
+-(id)initWithName:(NSString *)name quote:(NSString *)quote andImage:(NSData *)image;
 @end
 NS_ASSUME_NONNULL_END

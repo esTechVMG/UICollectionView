@@ -8,7 +8,10 @@
 #import "Character.h"
 
 @implementation Character
-@synthesize character;
-@synthesize quote;
-@synthesize imageUrl;
+- (id)initWithName:(NSString *)name quote:(NSString *)quote andImage:(NSData *)image{
+    self.name=name;
+    self.quote=quote;
+    self.image=image;
+    return self;
+}
 @end

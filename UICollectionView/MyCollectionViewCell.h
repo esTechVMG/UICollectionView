@@ -10,6 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MyCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *imagen;
 @property (weak, nonatomic) IBOutlet UILabel *etiqueta;
 @end
 
