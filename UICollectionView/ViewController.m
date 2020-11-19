@@ -38,13 +38,7 @@
             NSHTTPURLResponse * res=(NSHTTPURLResponse *) response;
             if([res statusCode]==200){
                 NSLog(@"HTTP Request Success");
-                NSArray * dict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]; //Information received
-                NSLog(@"%@", dict);
-                for(int i=0;i<[dict count];i++){
-                    NSDictionary * character= [dict objectAtIndex:i];
-                    NSData * imageData =[[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[character objectForKey:@"image"]]];
-                    
-                }
+                self->characterList = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil]; //Information received
             }else{
                 NSLog(@"HTTP Request Failed with status code %li", (long)[res statusCode]);
             }
@@ -63,23 +57,24 @@
     return 1;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 5;
+    return [characterList count];
 }
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     MyCollectionViewCell * cell= [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.etiqueta.text = [[NSString alloc] initWithFormat:@"%ld",(long)indexPath.row];
+    NSDictionary *character = [characterList objectAtIndex:indexPath.row];
+    cell.etiqueta.text = [character objectForKey:@"character"];
     return cell;
 }
-//for size at index path
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat width = (CGRectGetWidth(_collectionView.frame)/2)-10;
     CGFloat height = width;
     return CGSizeMake(width, height);
 }
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Test" message:[[NSString alloc]initWithFormat:@"Number:%ld",indexPath.row] preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction * ok= [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
-    [alert addAction:ok];
+    NSDictionary * dict= [characterList objectAtIndex:indexPath.row];
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:[dict objectForKey:@"character"] message:[dict objectForKey:@"quote"] preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction * close= [UIAlertAction actionWithTitle:@"Cerrar" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:close];
     [self presentViewController:alert animated:YES completion:nil];
 }
 
